@@ -1,3 +1,4 @@
+// C++ program to demonstrate the working of public inheritance
 #include <iostream>
 using namespace std;
 
@@ -9,6 +10,7 @@ class Base
             int prot = 2;
   public:
             int pub  = 3;
+             // function to access private member
             int getpvt()
             {
                 return pvt;
@@ -18,6 +20,7 @@ class Base
 class Derived : public Base
 {
     public:
+            // function to access protected member from Base
            int getprot()
            {
                return prot;
