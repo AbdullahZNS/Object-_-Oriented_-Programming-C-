@@ -1,3 +1,4 @@
+/// Single inheritance: In single inheritance, one class is derived from another class.
 #include <iostream>
 using namespace std;
 
