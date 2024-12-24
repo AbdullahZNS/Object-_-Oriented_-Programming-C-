@@ -1,65 +1,48 @@
- /*C++ program to Demonstrate Operator Overloading */
+/// C++ program to demonstrate the binary operator overloading
+
 
 #include <iostream>
 using namespace std;
 
-class Complex
+///class class name
+class Complex 
 {
   private:
-          int real,image;
+          int real,imag;
   public:
-          Complex()
-          {
-          real = 0;
-          image = 0;
-          }
-
-          Complex(int r, int i )
-          {
-              real  = r;
-              image = i;
-          }
-          /* This is automatically called when '+' is used with between two Complex objects*/
-          Complex operator + (Complex c4)
-          {
-              Complex temp;
-
-              temp.real = real + c4.real;
-              temp.image = image + c4.image;
-
-              return temp;
-          }
-
-          void show()
-          {
-             if(image < 0)
-             {
-             cout << real << " - " << -image << "i" << endl;
-             }
-
-              else
-              {
-
-             cout << real << " + " << image << "i" << endl;
-              }
-          }
+         void set_data(int r, int i)
+         {
+          real = r;
+          imag = i;
+         }
+   /* This is automatically called when '+' is used with between two Complex objects*/        
+ Complex operator + (Complex C4)
+ {
+  Complex temp;
+  temp.real = real + C4.real;
+  temp.imag = imag + C4.imag;
+  return temp;
+ }
+ void print()
+ {
+     if(imag < 0)
+     {
+       cout << real << " - " << -imag << "i" << endl;   
+     }
+     else
+     {
+        cout << real << " + " << imag << "i" << endl;   
+     }
+   
+ }
+ 
 };
-
-
-
-int main()
+int main() 
 {
-
-Complex c1(10,-5),c2(2,-4),c3;
-
-c3 = c1 + c2;
-c3.show();
-
-
-
-
-
-
-
+  Complex C1,C2,C3;
+  C1.set_data(10,5);
+  C2.set_data(2,4);
+  C3 = C1 + C2;
+  C3.print();
     return 0;
 }
