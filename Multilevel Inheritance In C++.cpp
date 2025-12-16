@@ -1,43 +1,40 @@
-
-// C++ program to implement Multilevel Inheritance
+// Online C++ compiler to run C++ program online
 #include <iostream>
 using namespace std;
 
-//Base class
-class XRP
+// Base Class (Grandfather)
+class Grandfather
 {
- public:
- void getxrp()
- {
- 
-  
-  cout << "xrp will be one of the topest successful cryptocurrency in the world." << endl;
-  
- }
+public:
+   void display_gf()
+   {
+   cout << "I am the grandfather." << endl;
+   }
 };
-// derived class from base class
-class SHIB : public XRP
+// Intermediate Derived Class(Father) - inherits from Grandfather
+class Father : public Grandfather
 {
- public:
-        void getshib()
-        {
-          cout <<"I will invest in SHIB around 100$." << endl; 
-        }
+public:
+   void display_f()
+   {
+    cout << "I an the father and inherit from Grandfather." << endl;   
+   }
 };
-// derived from class XRP
-class Cryptocurrency : public SHIB
+// Derived Class(Child) - inherits from Father(and implicitly Grandfather)
+class Child : public Father
 {
- public:
-        void getinvest()
-        {
-          cout << "I will invest around 300$ in cryptocurrency within ten months IN SHA ALLAH." << endl;   
-        }
+public:
+   void display_c()
+   {
+   cout << "I am the child and inherit from Father." << endl;    
+   }
 };
+
 int main() {
-  // object of sub class 
- Cryptocurrency obj;
- obj.getinvest();
- obj.getxrp();
- obj.getshib();
+   
+Child c;
+c.display_gf();
+c.display_f();
+c.display_c();
     return 0;
 }
