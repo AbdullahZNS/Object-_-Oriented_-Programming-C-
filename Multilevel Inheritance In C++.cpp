@@ -1,4 +1,5 @@
 // Online C++ compiler to run C++ program online
+/*Multilevel inheritance: Multilevel inheritance in C++ is a mechanism where a class inherits from another class that is already a derived class*/
 #include <iostream>
 using namespace std;
 
@@ -38,3 +39,4 @@ c.display_f();
 c.display_c();
     return 0;
 }
+
