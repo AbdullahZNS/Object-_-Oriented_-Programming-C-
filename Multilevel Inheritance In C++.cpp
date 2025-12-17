@@ -18,7 +18,7 @@ class Father : public Grandfather
 public:
    void display_f()
    {
-    cout << "I an the father and inherit from Grandfather." << endl;   
+    cout << "I am the father and inherit from Grandfather." << endl;   
    }
 };
 // Derived Class(Child) - inherits from Father(and implicitly Grandfather)
@@ -39,4 +39,5 @@ c.display_f();
 c.display_c();
     return 0;
 }
+
 
