@@ -38,43 +38,47 @@ int main() {
     return 0;
 }
 // problem: 02
+//  Multiple inheritance: Multiple inheritance in C++ is a mechanism where a class inherits from more than one base class simultaneously 
+
+ 
 #include <iostream>
 using namespace std;
 
-//Base class
+// Base class(Car)
 class Car
 {
 public:
    void drive()
    {
-    cout << "Driving on land." << endl;
+   cout << "Driving on land." << endl;
    }
 };
 
-//Base class
+// Base class(Boat) 
 class Boat
 {
 public:
    void sail()
    {
-    cout << "Sailing on water." << endl;
+   cout << "Sailing on water." << endl;    
    }
 };
-//Derived class
+
 class DualModeVehicle : public Car, public Boat
 {
 public:
-    void use()
-    {
-    drive(); // Calls the drive function from Car
-    sail(); // Calls the sail function from Boat
-    }
+   void use()
+   {
+   drive();
+   sail();
+   }
+   
 };
 
 int main()
 {
-  DualModeVehicle myvehicle;
-  myvehicle.use(); // Calls the use function by  myvehicle
+DualModeVehicle DMV;
+DMV.use();
     
     return 0;
 }
