@@ -160,3 +160,43 @@ string s3 = "Zarin Sultana";
 print(s3);
     return 0;
 }
+
+
+// Template type mix
+#include <iostream>
+using namespace std;
+
+template <class T1, class T2>
+void print(T1 a, T2 b)
+{
+cout << a << " " << b <<  endl;    
+}
+
+int main() {
+int num1 = 5;
+int num2 = 10;
+print(num1 , num2);
+
+double num3 = 5.5;
+double num4 = 6.2;
+print( num3, num4);
+
+string s4 = "Zarin ";
+string s5 = "Sultana";
+print(s4, s5);
+
+int num5 = 5;
+double num6 = 6.5;
+print(num5, num6);
+
+int num7 = 7.5;
+string s6 = "AAN";
+print(num7, s6);
+
+double num8 = 9.5;
+string s7  = "AAM";
+print(num8, s7);
+
+
+    return 0;
+}
