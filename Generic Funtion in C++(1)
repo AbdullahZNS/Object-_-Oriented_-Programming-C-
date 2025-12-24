@@ -94,6 +94,50 @@ int main() {
     int charSize = 5; // Size of the array
     cout << "Median of characters: " << CalculateMedian(charArr, charSize) << endl;
 
+
+
+Resources: Sharif Chowdhury
+// Generic Function
+#include <iostream>
+using namespace std;
+
+/*int add(int a, int b)
+{
+return a+b;
+}
+
+double add(double  a, double b)
+{
+return a+b;
+}
+
+string add(string a, string b)
+{
+return a+b;
+}
+*/
+template <class T>
+T add(T a, T b)
+{
+return a + b;
+}
+
+
+int main() {
+
+int num1 = 5;
+int num2 = 10;
+cout << "Summation: " << add(num1,num2) << endl; 
+double num3 = 5.5;
+double num4 = 10.2;
+cout << "Summation: " << add(num3,num4) << endl; 
+string s1 = "Osman ";
+string s2 = "Hadi";
+cout << "Concatation: " << add(s1 ,s2) << endl; 
+
+    return 0;
+}
+
     return 0;
 }
 
