@@ -200,3 +200,54 @@ print(num8, s7);
 
     return 0;
 }
+
+// Template function overloading
+#include <iostream>
+using namespace std;
+
+template <class T>
+void print(T a)
+{
+cout << "a = " << a << endl;
+}
+
+template <class T1, class T2>
+void print(T1 b, T2 c)
+{
+cout << "b = " << b << " c = " << c << endl;
+}
+
+int main() {
+   
+int num1 = 5;
+print(num1);
+
+double num2 = 5.5;
+print(num2);
+
+string s1 = "Zarin Sultana";
+print(s1);
+
+int num3 = 10;
+int num4 = 20;
+print(num3, num4);
+
+double num5 = 10.5;
+double num6 = 20.2;
+print(num5,num6);
+
+int num7 = 10;
+double num8 = 10.5;
+print(num7, num8);
+
+int num9 = 10;
+string s2 = "Ridhi";
+print(num9, s2);
+
+double num10 = 10.2;
+string s3 = "Zarinu";
+print(num10,s3);
+
+
+    return 0;
+}
