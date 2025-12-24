@@ -141,3 +141,22 @@ cout << "Concatation: " << add(s1 ,s2) << endl;
     return 0;
 }
 
+// Template type mix
+#include <iostream>
+using namespace std;
+
+template <class T>
+void print(T a)
+{
+cout << a << endl;    
+}
+
+int main() {
+int num1 = 5;   
+print(num1);
+int num2 = 5.5;   
+print( num2 );
+string s3 = "Zarin Sultana";
+print(s3);
+    return 0;
+}
