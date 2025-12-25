@@ -38,3 +38,42 @@ int main()
     
     return 0;
 }
+
+
+// Exception handling(Sharif Chowdhury ,Lec-77)
+#include <iostream>
+using namespace std;
+
+void positive(int a)
+{
+cout << "a: " << a << endl;
+if(a < 1)
+{
+throw a;
+}
+}
+
+int main() {
+    
+  try
+  { 
+  positive(5);
+  positive(-5);
+  positive(6);
+  }
+  
+  catch(int e)
+  {
+  cout << "Exception: " << e << endl;    
+  }
+    return 0;
+}
+কেন positive(6) execute হয় না?
+
+👉 কারণ:
+
+Exception throw হলে try block immediately terminate হয়
+
+Control সরাসরি catch এ চলে যায়
+
+try block-এর বাকি কোড আর চলে না
