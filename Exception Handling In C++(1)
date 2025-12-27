@@ -114,3 +114,14 @@ int main()
  
     return 0;
 }
+
+Exception Handling in C++ is a process to handle runtime errors. 
+throw − A program throws an exception when a problem shows up.
+catch − A program catches an exception with an exception handler.
+try − A try block identifies which particular exceptions will be activated. 
+
+Advantages of Exception Handling:
+1. Exception handling can control run tune errors. 
+2. It can separate the error handling code and normal code 
+3. It can avoid abnormal termination of the program.
+4. It can produce the normal execution flow for a program. 
