@@ -1,45 +1,41 @@
+//
 #include <iostream>
 using namespace std;
 
-int main()
-{
-
- try{
-    int num1,num2;
+int main() {
  
-    cout << "Enter the 1st Number:" << endl;
-    cin >> num1;
-
-     cout << "Enter the 2nd Number:" << endl;
+ try
+ {
+     int num1, num2;
+     
+     cout << "Enter the 1st number: " << endl;   
+     cin >> num1;
+     
+     cout << "Enter the 2nd number: " << endl;
      cin >> num2;
      
      if(num2 == 0)
      {
-         throw "Divided by Zero is not possible";
+     throw "Divided by zero is not possible";     
      }
- 
-     double result = (double) num1 / num2;
- 
-     cout <<"Result :" << result << endl;
      
- }
- 
- catch(const char* x)
- {
-     cout << x << endl;
- }
-
-    
-    
-    
-    
-    
-    
-    
-    return 0;
+     double result = (double)num1 / num2;
+     cout << "Result: " << result << endl;   
 }
 
+catch(const char* x)
+{
 
+cout << x << endl;
+    
+} 
+
+    
+
+     
+
+    return 0;
+}
 // Exception handling(Sharif Chowdhury ,Lec-77)
 #include <iostream>
 using namespace std;
@@ -77,3 +73,44 @@ Exception throw হলে try block immediately terminate হয়
 Control সরাসরি catch এ চলে যায়
 
 try block-এর বাকি কোড আর চলে না
+
+
+#include <iostream>
+using namespace std;
+ 
+ 
+    void positive(int a)
+    {
+    
+    cout << "a: " << a << endl;
+    
+    try
+    {
+    
+    if(a < 1)
+    {
+    throw a;
+    }    
+   
+    }
+    
+   catch(int e)
+ {
+  cout << "Exception: " << e << endl;
+ }
+ 
+   
+   
+   }
+
+ 
+
+int main()
+{
+ positive(5);  
+ positive(-5);
+ positive(6);
+ 
+ 
+    return 0;
+}
