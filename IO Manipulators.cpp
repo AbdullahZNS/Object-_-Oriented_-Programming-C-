@@ -36,3 +36,21 @@ int main() {
    cout << scientific << a << " " << b << endl;
    return 0;
 }
+
+//IO Manipulator showpos, noshowpos
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+   
+  cout << 200 << endl;
+  cout << showpos << 200 << endl;
+  cout << showpos << -200 << endl;
+  cout << 400 << endl;
+  cout << noshowpos << 500 << endl;
+   
+   
+   return 0;
+}
