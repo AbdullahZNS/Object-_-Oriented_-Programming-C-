@@ -54,3 +54,21 @@ int main() {
    
    return 0;
 }
+
+
+//IO Manipulator setw,setfil,setprecision
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+   
+  cout << setw(15) << setfill('.') <<  "Abdullah" << endl;
+  cout << setprecision(6) << 123.4236 << endl;
+ 
+ 
+   
+   
+   return 0;
+}
